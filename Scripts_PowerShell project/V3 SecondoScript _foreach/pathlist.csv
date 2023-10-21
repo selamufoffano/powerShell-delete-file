@@ -1,0 +1,28 @@
+#
+# Selamu Foffano 07/09/2023
+# Per aggiungere delle note al file usare: "#" 
+# File CSV contiene parametri script in PowerShell. 
+# Script finalizzato a eliminare i log ricorsivamente da una cartella e le loro sottocartelle
+#
+#////////////////////////////////////// PARAMETRI FILE CSV //////////////////////////////////////
+# path: percorso cartella log
+# retention: numero di giorni che devono essere passati affinchè il file venga cancellato
+# filter: file da filtrare. Es: .log, .txt
+#   --> se una cartella contine file con estensionsioni
+#       diverse tra loro, per cancellare quest'ultimi
+#       è neccessario creare una nuova stringa nel CSV (una per ogni estensione).
+#
+#	ESEMPIO:
+#       path,retention,filter,recurse
+#       Es: C:\Users\name\Desktop,90,.log,true
+#       Es: C:\Users\name\Desktop,180,.txt,true
+#       Es: C:\Users\name\Desktop,365,.docx,true
+#	('*.txt', '*.log')
+#
+# recurse: accetta solo valori "true" e "false"
+#    --> true = lo script legge anche le sottocartelle
+#    --> false = non vengono considerate le sottocartelle  
+#//////////////////////////////////////////////////////////////////////////////////////////////////
+path,retention,filter,recurse
+C:\user\,180,.docx,true
+C:\Users\name\Desktop,365,.txt,false
